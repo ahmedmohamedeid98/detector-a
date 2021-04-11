@@ -22,10 +22,10 @@ from flask_cors import CORS
 app=Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['GET'])
-def First():
-   return jsonify({'message': 'success root'})
-    # return render_template('detect.html')
+# @app.route('/', methods=['GET'])
+# def First():
+#    return jsonify({'message': 'success root'})
+#     # return render_template('detect.html')
 
 
 @app.route('/video_feed')
