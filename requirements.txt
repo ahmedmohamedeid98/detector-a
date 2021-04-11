@@ -10,4 +10,5 @@ scikit-fuzzy==0.4.2
 six==1.15.0
 ws4py==0.5.1
 zipp==3.2.0
+skia-python==87.1
 opencv-python==4.5.1.48 
