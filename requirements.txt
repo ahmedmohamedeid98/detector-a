@@ -1,4 +1,6 @@
 pip
+Flask==1.1.2 
+Flask-Cors==3.0.10 
 anvil-uplink==0.3.36
 dlib==19.21.1
 future==0.18.2
