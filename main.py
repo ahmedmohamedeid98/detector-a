@@ -4,8 +4,8 @@ import cv2
 
 from camera import VideoCamera
 from flask import Flask,jsonify,render_template,Response, request,redirect, url_for
-import logging
-import sys
+# import logging
+# import sys
 from flask_cors import CORS 
 
 
@@ -34,8 +34,8 @@ def video_feed():
     # return Response(gen(VideoCamera()), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
+# app.logger.addHandler(logging.StreamHandler(sys.stdout))
+# app.logger.setLevel(logging.ERROR)
 
 if __name__=="__main__":
     app.run(debug=True)
