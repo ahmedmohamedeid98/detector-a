@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 from camera import VideoCamera
-from flask import Flask,render_template,Response, request,redirect, url_for
+from flask import Flask,jsonify,render_template,Response, request,redirect, url_for
 
 from flask_cors import CORS 
 
@@ -21,16 +21,16 @@ def gen(camera):
 
 @app.route('/video_feed')
 def video_feed():
-    print('in video feed')
-    return Response(gen(VideoCamera()), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return jsonify({'message': 'success video feed'})
+    # return Response(gen(VideoCamera()), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def First():
-    print('in ///////')
-    return render_template('detect.html')
+   return jsonify({'message': 'success root'})
+    # return render_template('detect.html')
 
 
 if __name__=="__main__":
-    app.run(debug=True, port=3000)
+    app.run(debug=True)
 
 
