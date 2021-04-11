@@ -6,7 +6,7 @@ from camera import VideoCamera
 from flask import Flask,jsonify,render_template,Response, request,redirect, url_for
 # import logging
 # import sys
-from flask_cors import CORS 
+# from flask_cors import CORS 
 
 
 
@@ -20,7 +20,7 @@ def gen(camera):
                + b'\r\n\r\n')
 
 app=Flask(__name__)
-CORS(app)
+# CORS(app)
 
 @app.route('/', methods=['GET'])
 def first():
