@@ -24,14 +24,14 @@ CORS(app)
 
 @app.route('/', methods=['GET'])
 def first():
-#    return jsonify({'message': 'success root'})
-    return render_template('detect.html')
+   return jsonify({'message': 'success root'})
+    # return render_template('detect.html')
 
 
 @app.route('/video_feed')
 def video_feed():
-    # return jsonify({'message': 'success video feed'})
-    return Response(gen(VideoCamera()), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return jsonify({'message': 'success video feed'})
+    # return Response(gen(VideoCamera()), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
