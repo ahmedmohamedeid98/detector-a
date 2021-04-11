@@ -4,7 +4,8 @@ import cv2
 
 from camera import VideoCamera
 from flask import Flask,jsonify,render_template,Response, request,redirect, url_for
-
+import logging
+import sys
 from flask_cors import CORS 
 
 
@@ -26,7 +27,7 @@ def First():
    return jsonify({'message': 'success root'})
     # return render_template('detect.html')
 
-    
+
 @app.route('/video_feed')
 def video_feed():
     return jsonify({'message': 'success video feed'})
