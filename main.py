@@ -8,7 +8,7 @@ from flask import Flask,render_template,Response, request,redirect, url_for
 from flask_cors import CORS 
 
 app=Flask(__name__)
-
+CORS(app)
 
 def gen(camera):
 
