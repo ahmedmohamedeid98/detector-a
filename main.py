@@ -21,10 +21,12 @@ def gen(camera):
 
 @app.route('/video_feed')
 def video_feed():
+    print('in video feed')
     return Response(gen(VideoCamera()), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/')
 def First():
+    print('in ///////')
     return render_template('detect.html')
 
 
